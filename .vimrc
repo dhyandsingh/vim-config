@@ -10,6 +10,8 @@ call plug#begin()
 " Plug 'ervandew/supertab'
 Plug 'valloric/youcompleteme'
 
+Plug 'jiangmiao/auto-pairs'
+
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
 " Plug 'airblade/vim-gitgutter'
