@@ -44,3 +44,14 @@ let g:UltiSnipsEditSplit="vertical"
 " Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 call plug#end()
 set laststatus=2
+
+" WSL yank support
+let s:clip = "/mnt/c/Windows/System32/clip.exe" " change this path according to
+if executable(s:clip)
+	augroup WSLYank
+		autocmd!
+		autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
+	augroup END
+endif
+
+set pastetoggle=<F2>
