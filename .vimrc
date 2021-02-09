@@ -4,6 +4,8 @@ set shiftwidth=4
 set expandtab
 set autoindent
 
+inoremap jj <Esc>
+
 call plug#begin()
 " Plug 'mhinz/vim-signify'
 " Plug 'tpope/vim-sensible'
